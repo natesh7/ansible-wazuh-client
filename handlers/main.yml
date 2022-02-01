@@ -1,0 +1,11 @@
+---
+- name: restart wazuh daemon
+  systemd:
+    name: wazuh-agent
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
+
+- name: reload systemd
+  systemd:
+    daemon_reload: yes

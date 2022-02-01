@@ -1,0 +1,8 @@
+---
+- hosts: all
+  any_errors_fatal: true
+  become: yes
+  gather_facts: true
+  roles:
+    - { role: ansible-wazuh-client,
+      }
